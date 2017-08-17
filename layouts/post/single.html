@@ -6,6 +6,19 @@
 	{{ partial "taxonomyLinks.html" (dict "context" . "separator" "newline") }}
  </span>
     {{ .Content }}
+
+<hr />
+<div>
+        {{ with .PrevInSection }}
+          <i class="fa fa-long-arrow-left" aria-hidden="true"></i><a class="previous" href="{{.Permalink}}"> {{.Title}}</a>
+        {{ end }}
+	{{ if and (.PrevInSection) (.NextInSection) }}
+	<span>&nbsp;|&nbsp</span>
+	{{ end }}
+        {{ with .NextInSection }}
+          <a class="next" href="{{.Permalink}}">{{.Title}} </a><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+        {{ end }}
+    </div>
   </div>
   {{ if .Site.DisqusShortname }}<div id="disqus_thread"></div>{{ end }}
 </div>
