@@ -1,9 +1,7 @@
 name = "rehyde-x"
 license = "MIT"
 licenselink = "https://github.com/forquare/rehyde-x/blob/master/LICENSE"
-description = "An elegant open source and mobile first theme, enhanced port of the Jekyll "Hyde" theme to the Hugo site generator.
-
-An elegant open source and mobile first theme, extended with new integrations and layout improvements"
+description = "An elegant open source and mobile first theme, enhanced port of the Jekyll "Hyde" theme to the Hugo site generator."
 homepage = "https://github.com/forquare/rehyde-x"
 tags = ["blog", "technical", "personal"]
 features = ["blog", "technical", "personal"]
