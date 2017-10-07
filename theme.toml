@@ -1,6 +1,6 @@
 name = "rehyde-x"
 license = "MIT"
-licenselink = "https://github.com/forquare/rehyde-x/LICENSE"
+licenselink = "https://github.com/forquare/rehyde-x/blob/master/LICENSE"
 description = "An elegant open source and mobile first theme, extended with new integrations and layout improvements"
 homepage = "https://github.com/forquare/rehyde-x"
 tags = ["blog", "technical", "personal"]
