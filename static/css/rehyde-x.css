@@ -378,3 +378,8 @@ a.label:focus {
   background-color: #fff;
   border-color: #ddd;
 }
+
+
+.content_full_width  {
+  max-width: 100%;
+}
