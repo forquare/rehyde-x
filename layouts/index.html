@@ -1,5 +1,9 @@
 {{ partial "head.html" . }}
+{{ if eq .Site.Params.fullWidth true }}
+<div class="content_full_width content container">
+{{ else }}
 <div class="content container">
+{{ end }}
   <div class="posts">
     {{ $paginator := .Paginate (where .Data.Pages "Type" "post") }}
     {{ range $paginator.Pages }}

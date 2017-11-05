@@ -95,6 +95,9 @@ paginate = 10
     # Optional additional custom CSS file URL, will override other styles.
     customCSS = ""
 
+    # Toggle full width content
+    fullWidth = false
+
     # Displays under the author name in the sidebar, keep it short.
     # You can use markdown here.
     tagline = "Your favourite quote or soundbite."
