@@ -1,9 +1,16 @@
 {{ partial "head.html" . }}
+{{ if eq .Site.Params.fullWidth true }}
+<div class="content_full_width content container">
+{{ else }}
 <div class="content container">
+{{ end }}
   <div class="post">
     <h1>404 Not Found</h1>
     <p>What you're looking for isn't here, sorry!</p>
     <p><a href="{{ "/" | absURL }}">&larr; Click here to go back home</a></p>
   </div>
+  </div>
 </div>
+
 {{ partial "foot.html" . }}
+
