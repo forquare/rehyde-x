@@ -22,13 +22,12 @@
 
     <div class="sidebar-nav-search">
       <form action="{{ "search" | absURL }}">
-        <input id="text" name="s" placeholder="search..." />
-	<button class="fa fa-search"></button>
+        <input type="text" name="s" placeholder="search..." /><button class="fa fa-search"></button>
       </form>
     </div>
 
     <ul class="sidebar-nav">
-      <li class="sidebar-nav-item">
+      <li class="sidebar-nav-icon">
 
       {{ $.Scratch.Set "square" "-square"}}
       {{ if not .Site.Params.social.isSquaredIcon }}
@@ -49,8 +48,8 @@
       {{ with .Site.Params.facebook }}<a href="{{ . }}"><i class="fa fa-facebook{{ $.Scratch.Get "square" }} fa-{{ $.Scratch.Get "iconSize" }}"></i></a>{{ end }}
       {{ with .Site.Params.twitter }}<a href="{{ . }}"><i class="fa fa-twitter{{ $.Scratch.Get "square" }} fa-{{ $.Scratch.Get "iconSize" }}"></i></a>{{ end }}
       {{ with .Site.Params.youtube }}<a href="{{ . }}"><i class="fa fa-youtube{{ $.Scratch.Get "square" }} fa-{{ $.Scratch.Get "iconSize" }}"></i></a>{{ end }}
-      {{ with .Site.Params.email }}<a href="mailto:{{ . }}"><i class="fa fa-envelope{{ $.Scratch.Get "square" }} fa-{{ $.Scratch.Get "iconSize" }}"></i></a>{{ end }}
 
+      {{ with .Site.Params.email }}<a href="mailto:{{ . }}"><i class="fa fa-envelope{{ $.Scratch.Get "square" }} fa-{{ $.Scratch.Get "iconSize" }}"></i></a>{{ end }}
       {{ if .Site.Params.rss }}<a href="{{ "/index.xml" | absURL }}" type="application/rss+xml"><i class="fa fa-rss{{ $.Scratch.Get "square" }} fa-{{ $.Scratch.Get "iconSize" }}"></i></a>{{ end }}
 
       </li>

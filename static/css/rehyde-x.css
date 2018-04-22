@@ -385,12 +385,51 @@ a.label:focus {
 }
 
 .sidebar-nav-search {
+  background-color: #fff;
   margin: 0 0 1rem 0;
+  border:1px solid #000;
+  height: 30px;
 }
 
-.sidebar-nav-search #text {
-  background-color:transparent;
-  border:0;
+.sidebar-nav-search input, button {
+  background-color: transparent;
+  border: 0;
+  margin: 0 0 0 0;
+  display: inline-block;
+  margin: 0; 
+  padding: 0;
+}
+
+.sidebar-nav-search input {
   font-family: Menlo, Monaco, "Courier New", monospace;
-  font-size: 20px;
+  font-size: 18px;
+  width: 100%;
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box;    
+  box-sizing: border-box;
+  padding-right: 30px;
+  padding-left: 5px;
+  height: 28px;
+}
+
+.sidebar-nav-search button {
+  padding-right: 5px;
+  float: right;
+  position: relative;
+  top: -30px;
+  height: 28px;
+  font-size: 18px;
+  
+}
+
+.sidebar-nav-icon {
+  display: inline-block;
+  line-height: 1.75;
+}
+a.sidebar-nav-icon:hover,
+a.sidebar-nav-icon:focus {
+  text-decoration: underline;
+}
+.sidebar-nav-icon.active {
+  font-weight: bold;
 }
