@@ -383,3 +383,14 @@ a.label:focus {
 .content_full_width  {
   max-width: 100%;
 }
+
+.sidebar-nav-search {
+  margin: 0 0 1rem 0;
+}
+
+.sidebar-nav-search #text {
+  background-color:transparent;
+  border:0;
+  font-family: Menlo, Monaco, "Courier New", monospace;
+  font-size: 20px;
+}
