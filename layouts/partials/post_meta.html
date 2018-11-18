@@ -1,0 +1,20 @@
+<span class="post-date"><i class="fa fa-calendar fa-fw"></i>{{ .Date.Format "Monday, 02 Jan 2006 15:04:05" }}{{ if not .Site.Params.hideReadingTime }} &middot; <i class="fas fa-book-reader"></i> {{ .ReadingTime }} minute read{{ end }}{{ if .Site.DisqusShortname }} &middot; <i class="fas fa-comments"></i> <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+{{ $count := len .Params.tags }}
+{{ if gt $count 0 }}
+<div>
+<i class="fa fa-tags fa-fw"></i>
+{{ range $k, $v := .Params.tags }}
+<a href="/tags/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+{{ end }}
+{{ end }}
+&middot;
+{{ $count := len .Params.categories }}
+{{ if gt $count 0 }}
+<i class="fas fa-sitemap"></i>
+{{ range $k, $v := .Params.categories }}
+<a href="/categories/{{ . | urlize }}">{{ . }}</a>{{ if lt $k (sub $count 1) }}&nbsp;&#47;{{ end }}
+{{ end }}
+</div>
+{{ end }}
+ </span>
+
