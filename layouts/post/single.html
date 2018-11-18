@@ -6,7 +6,7 @@
 {{ end }}
   <div class="post">
     <h1 class="post-title">{{ .Title }}</h1>
-    <span class="post-date">{{ .Date.Format "Jan 2, 2006" }}{{ if not .Site.Params.hideReadingTime }} &middot; {{ .ReadingTime }} minute read{{ end }}{{ if .Site.DisqusShortname }} &middot; <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+    <span class="post-date"><i class="fa fa-calendar fa-fw"></i>{{ .Date.Format "Monday, 02 Jan 2006 15:04:05" }}{{ if not .Site.Params.hideReadingTime }} &middot; <i class="fas fa-book-reader"></i> {{ .ReadingTime }} minute read{{ end }}{{ if .Site.DisqusShortname }} &middot; <i class="fas fa-comments"></i> <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
 	{{ partial "taxonomyLinks.html" (dict "context" . "separator" "newline") }}
  </span>
     {{ .Content }}
