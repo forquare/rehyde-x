@@ -17,6 +17,13 @@ You can find releases of rehyde-x here: [rehyde-x releases](https://github.com/f
 * [Questions, ideas, bugs, pull requests?](#questions-ideas-bugs-pull-requests)
 * [License](#license)
 
+Master:
+[![Build Status](https://travis-ci.org/forquare/rehyde-x.svg?branch=master)](https://travis-ci.org/forquare/rehyde-x)
+
+Test:  
+[![Build Status](https://travis-ci.org/forquare/rehyde-x.svg?branch=test)](https://travis-ci.org/forquare/rehyde-x)
+
+
 ### Installation
 
 ```
