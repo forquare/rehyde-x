@@ -13,4 +13,4 @@ install:
 
 script: 
 - cd exampleSite
-- hugo --themesDir=.. -d ../public --cleanDestinationDir --enableGitInfo
+- hugo --themesDir=../.. -t rehyde-x -d ../public --cleanDestinationDir --enableGitInfo
