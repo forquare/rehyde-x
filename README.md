@@ -124,16 +124,27 @@ paginate = 10
     googleAnalytics = "Your Google Analytics tracking code"
     gravatarHash = "MD5 hash of your Gravatar email address"
 
-    # Sidebar social links, these must be full URLs.
-    github = ""
-    bitbucket = ""
-    stackOverflow = ""
-    linkedin = ""
-    googleplus = ""
-    facebook = ""
-    twitter = ""
-    youtube = ""
-    email = ""
+    # Sidebar links
+    icons:
+      iconSize: 2x
+      # The order of items in this list determines the order the icons appear left to right
+      iconList:
+        # Icons with a link key requires the name key to match a Font Awesome icon
+        - name: github
+          link: https://github.com/myprofile/
+          # If the icon has a square icon available, it can be activated here
+          isSquaredIcon: true
+        - name: mastodon
+          link: https://my-instance.io/@muprofile
+          # If the icon does not have a square icon available, it must be set to false
+          isSquaredIcon: true
+        # If the name key is "rss", the rss icon will be used
+        - name: rss
+          isSquaredIcon: true
+        # If an item has a mailLink key, an envelope icon will be used and prefix the email address with mailto:
+        - name: email
+          mailLink: me@mysite.com
+          isSquaredIcon: true
 
     # Other social-like sidebar links
     rss = false  # switch to true to enable RSS icon link
