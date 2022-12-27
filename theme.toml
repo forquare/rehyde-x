@@ -3,8 +3,8 @@ license = "MIT"
 licenselink = "https://github.com/forquare/rehyde-x/blob/master/LICENSE"
 description = "An elegant open source and mobile first theme, enhanced port of the Jekyll 'Hyde' theme to the Hugo site generator."
 homepage = "https://github.com/forquare/rehyde-x"
-tags = ["blog", "technical", "personal"]
-features = ["blog", "technical", "personal"]
+tags = ["blog"]
+features = ["blog"]
 min_version = 0.14
 
 [author]
@@ -12,7 +12,6 @@ min_version = 0.14
     homepage = "http://hashbang0.com"
     repo = "https://github.com/forquare/rehyde-x"
 
-# If Porting existing theme
 [original]
     name = "Andrei Mihu"
     homepage = "http://andreimihu.com"
