@@ -52,107 +52,103 @@ Just run `hugo --theme=rehyde-x` to generate your site!
 
 ### Configuration
 
-An example of what your site's `config.toml` could look like. All theme-specific parameters are under `[params]` and standard Hugo parameters are used where possible.
+An example of what your site's `config.yaml` could look like. All theme-specific parameters are under `[params]` and standard Hugo parameters are used where possible.
 
-``` toml
-baseurl = "http://example.com/"
-title = "Your site title"
-languageCode = "en-us"
-disqusShortname = "your_disqus_shortname" # Optional, enable Disqus integration
-MetaDataFormat = "toml"
-theme = "rehyde-x"
-paginate = 10
+```yaml
+baseurl: "http://example.com/"
+title: "Your site title"
+languageCode: "en-us"
+disqusShortname: "your_disqus_shortname" # Optional, enable Disqus integration
+MetaDataFormat: "toml"
+theme: "rehyde-x"
+paginate: 10
 
-[author]
-    name = "Your Name"
+author:
+  name: "Your Name"
 
-[permalinks]
-    # Optional. Change the permalink format for the 'post' content type.
-    # The format shown here is the same one Jekyll/Octopress uses by default.
-    post = "/blog/:year/:month/:day/:title/"
-
-[taxonomies]
-    # Optional. Use if you want tags and lists.
-    category = "categories"
-
+permalinks:
+  # Optional. Change the permalink format for the 'post' content type.
+  # The format shown here is the same one Jekyll/Octopress uses by default.
+  post: '/blog/:year/:month/:day/:title/'
+  
+taxonomies:
+  # Optional. Use if you want tags and lists.
+  category: categories
+  
 #
 # All parameters below here are optional and can be mixed and matched.
 #
-[params]
-    # If false display full article contents in blog index.
-    # Otherwise show description and 'read on' link to individual blog post page.
-    # Default (if omitted) is true.
-    truncate = true
+params:
+  # If false display full article contents in blog index.
+  # Otherwise show description and 'read on' link to individual blog post page.
+  # Default (if omitted) is true.
+  truncate: true
 
-    # Used when a given page doesn't set its own.
-    defaultDescription = "Your default page description"
-    defaultKeywords = "your,default,page,keywords"
+  # Used when a given page doesn't set its own.
+  defaultDescription: Your default page description
+  defaultKeywords: 'your,default,page,keywords'
 
-    # Hide estimated reading time for posts.
-    # Default (if omitted) is false.
-    hideReadingTime = false
+  # Hide estimated reading time for posts.
+  # Default (if omitted) is false.
+  hideReadingTime: false
 
-    # Changes sidebar background and link/accent colours.
-    # See below for more colour options.
-    # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
-    colorTheme = "theme-base-08"
+  # Changes sidebar background and link/accent colours.
+  # See below for more colour options.
+  # This also works: "theme-base-08 layout-reverse", or just "layout-reverse".
+  colorTheme: theme-base-08
 
-    # Select a syntax highight.
-    # Check the static/css/highlight directory for options.
-    highlight = "sunburst"
+  # Select a syntax highight.
+  # Check the static/css/highlight directory for options.
+  highlight: sunburst
 
-    # Optional additional custom CSS file URL, will override other styles.
-    customCSS = ""
+  # Optional additional custom CSS file URL, will override other styles.
+  customCSS: ''
 
-    # Toggle full width content
-    fullWidth = false
+  # Toggle full width content
+  fullWidth: false
 
-    # Displays under the author name in the sidebar, keep it short.
-    # You can use markdown here.
-    tagline = "Your favourite quote or soundbite."
+  # Displays under the author name in the sidebar, keep it short.
+  # You can use markdown here.
+  tagline: Your favourite quote or soundbite.
 
-    # Text for the top menu link, which goes the root URL for the site.
-    # Default (if omitted) is "Blog".
-    home = "Blog"
+  # Text for the top menu link, which goes the root URL for the site.
+  # Default (if omitted) is "Blog".
+  home: Blog
 
-    # Links will be generated for these taxonomies
-    # Use to add links for categories, tags, etc.
-    # Example: [ "categories", "tags" ]
-    taxonomyItemsToLink = [ "categories" ]
-
-    # Metadata used to drive integrations.
-    googleAnalytics = "Your Google Analytics tracking code"
-    gravatarHash = "MD5 hash of your Gravatar email address"
-
-    # Sidebar links
-    icons:
-      iconSize: 2x
-      # The order of items in this list determines the order the icons appear left to right
-      iconList:
-        # Icons with a link key requires the name key to match a Font Awesome icon
-        - name: github
-          link: https://github.com/myprofile/
-          # If the icon has a square icon available, it can be activated here
-          isSquaredIcon: true
-        - name: mastodon
-          link: https://my-instance.io/@muprofile
-          # If the icon does not have a square icon available, it must be set to false
-          isSquaredIcon: true
-        # If the name key is "rss", the rss icon will be used
-        - name: rss
-          isSquaredIcon: true
-        # If an item has a mailLink key, an envelope icon will be used and prefix the email address with mailto:
-        - name: email
-          mailLink: me@mysite.com
-          isSquaredIcon: true
-
-    # Other social-like sidebar links
-    rss = false  # switch to true to enable RSS icon link
-    flattr = ""  # populate with your flattr uid
-
-    [params.social]
-      iconSize = "2x"
-      isSquaredIcon = false
+  # Links will be generated for these taxonomies
+  # Use to add links for categories, tags, etc.
+  # Example: [ "categories", "tags" ]
+  taxonomyItemsToLink:
+    - categories
+      
+  # Metadata used to drive integrations.
+  googleAnalytics: Your Google Analytics tracking code
+  gravatarHash: MD5 hash of your Gravatar email address
+    
+  rss: false  # switch to true to enable RSS icon link
+  flattr: ""  # populate with your flattr uid
+    
+  # Sidebar links
+  icons:
+    iconSize: 2x
+    # The order of items in this list determines the order the icons appear left to right
+    iconList:
+      # Icons with a link key requires the name key to match a Font Awesome icon
+      - name: github
+        link: https://github.com/myprofile/
+        # If the icon has a square icon available, it can be activated here
+        isSquaredIcon: true
+      - name: mastodon
+        link: https://my-instance.io/@muprofile
+        # If the icon does not have a square icon available, it must be set to false
+        isSquaredIcon: true
+      # If the name key is "rss", the rss icon will be used
+      - name: rss
+        isSquaredIcon: true
+      # If an item has a mailLink key, an envelope icon will be used and prefix the email address with mailto:
+      - name: email
+        mailLink: me@mysite.com
+        isSquaredIcon: true
 ```
 
 ### Built-in colour themes
@@ -163,14 +159,14 @@ rehyde-x provides 8 built-in colour themes by default, with the option to define
 
 ### Tips
 
-* If you've added `theme = "rehyde-x"` to your `config.toml`, you don't need to keep using the `--theme=rehyde-x` flag!
+* If you've added `theme: "rehyde-x"` to your `config.yaml`, you don't need to keep using the `--theme=rehyde-x` flag!
 * Pages where you specify `menu = "main"` in the front matter will be linked in the sidebar just below the `Blog` link.
 * Use the exact permalink format above to maintain old links if migrating from Jekyll/Octopress.
 * Although all of the syntax highlight CSS files under the theme's `static/css/highlight` are bundled with the site, only the one you choose will be included in the page and delivered to the browser.
 * Change the favicon by providing your own as `static/favicon.png` in your site directory.
 * Hugo makes it easy to override theme layout and behaviour, read about it [here](http://gohugo.io/themes/customizing).
-* Pagination is set to 10 items by default, change it by updating `paginate = 10` in your `config.toml`.
-* Set `truncate = false` in the `[params]` section of your `config.toml` to display full blog post contents in the index page, like the [base Hyde theme](https://github.com/poole/hyde) did.
+* Pagination is set to 10 items by default, change it by updating `paginate: 10` in your `config.yaml`.
+* Set `truncate: false` in the `[params]` section of your `config.yaml` to display full blog post contents in the index page, like the [base Hyde theme](https://github.com/poole/hyde) did.
 
 ### Changes and enhancements from the original theme
 
