@@ -1,4 +1,4 @@
-<span class="post-date"><i class="fa fa-calendar fa-fw"></i>{{ .Date.Format "Monday, 02 Jan 2006 15:04:05" }}{{ if not .Site.Params.hideReadingTime }} &middot; <i class="fas fa-book-reader"></i> {{ .ReadingTime }} minute read{{ end }}{{ if .Site.DisqusShortname }} &middot; <i class="fas fa-comments"></i> <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
+<span class="post-date"><i class="fa fa-calendar fa-fw"></i>{{ .Date.Format "Monday, 02 Jan 2006 15:04:05" }}{{ if not .Site.Params.hideReadingTime }} &middot; <i class="fas fa-book-reader"></i> {{ .ReadingTime }} minute read{{ end }}{{ if .Site.Config.Services.Disqus.Shortname }} &middot; <i class="fas fa-comments"></i> <a href="{{ .Permalink }}#disqus_thread">Comments</a>{{ end }}
 {{ $count := len .Site.Taxonomies.tags }}
 {{ if gt $count 0 }}
 <div>
